@@ -2,16 +2,16 @@
 class DdSnmpProfiler < Formula
   desc "dd-snmp-profiler is a CLI to generate SNMP profiles for Datadog"
   homepage ""
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/abruneau/dd-snmp-profiler/releases/download/0.1.1/dd-snmp-profiler_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "71f65bc34cbb6a1cc25ff01e8bdc5f01789d1a678648659c18aaf61838bd2601"
+    url "https://github.com/abruneau/dd-snmp-profiler/releases/download/0.1.2/dd-snmp-profiler_0.1.2_Darwin_x86_64.tar.gz"
+    sha256 "8a9dffb6e9f9fb57a9b6f7451d03accdcd5544261e0161f0898421863203612f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/abruneau/dd-snmp-profiler/releases/download/0.1.1/dd-snmp-profiler_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "ab8c1722e758d0fa586bc3ec14e707a789f50859bf65308e6b42d86657793e2b"
+      url "https://github.com/abruneau/dd-snmp-profiler/releases/download/0.1.2/dd-snmp-profiler_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "409a04e449bc94c894c8e62df7cbef42bf148e15bdaaf37e003c2f8187e54a51"
     end
   end
 

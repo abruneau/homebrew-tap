@@ -9,17 +9,17 @@ class GrafanaToDatadog < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/abruneau/grafana_to_datadog/releases/download/0.2.0/grafana_to_datadog_Darwin_arm64.tar.gz"
-      sha256 "762b4eef96274c25e9c531155f23a9acb902190b96c26173ef290c9e11ec2beb"
+    if Hardware::CPU.intel?
+      url "https://github.com/abruneau/grafana_to_datadog/releases/download/0.2.0/grafana_to_datadog_Darwin_x86_64.tar.gz"
+      sha256 "1aa5322f1632d867263e68eed7a8cfdb4e40409d1551c0fbd4ede04a63d63e80"
 
       def install
         bin.install "grafana_to_datadog"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/abruneau/grafana_to_datadog/releases/download/0.2.0/grafana_to_datadog_Darwin_x86_64.tar.gz"
-      sha256 "441bbccccb9035b2f107d08f7855fa4874b62ae9e6a14f9ef9810f79fff9c933"
+    if Hardware::CPU.arm?
+      url "https://github.com/abruneau/grafana_to_datadog/releases/download/0.2.0/grafana_to_datadog_Darwin_arm64.tar.gz"
+      sha256 "c769437699644dc3dcea680d4ec1acb6eb4101d8b00570b89495c516a62b7a6d"
 
       def install
         bin.install "grafana_to_datadog"
@@ -30,7 +30,7 @@ class GrafanaToDatadog < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abruneau/grafana_to_datadog/releases/download/0.2.0/grafana_to_datadog_Linux_arm64.tar.gz"
-      sha256 "38e6d52da4a615e5d60f085a8205b1cd4708e5a1ade2d5756483a8e38a1dc87d"
+      sha256 "7736b6e36e5eacf59372ca1f6701be986374261f592cd4aef72d47969af85888"
 
       def install
         bin.install "grafana_to_datadog"
@@ -38,7 +38,7 @@ class GrafanaToDatadog < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/abruneau/grafana_to_datadog/releases/download/0.2.0/grafana_to_datadog_Linux_x86_64.tar.gz"
-      sha256 "2881599125f9277a241b1c21ab27ad2782d5b7444c65c44c530d016fd6f0a94d"
+      sha256 "c2ebb64e216b919c502b4931408ff65e5eb2532de495bd4f61ad7d55787b2f40"
 
       def install
         bin.install "grafana_to_datadog"

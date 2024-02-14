@@ -5,21 +5,21 @@
 class GrafanaToDatadog < Formula
   desc "Cli to convert Grafana dashboards to Datadog dashboards"
   homepage "https://github.com/abruneau/grafana_to_datadog"
-  version "2.3.0-rc1"
+  version "2.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0-rc1/grafana_to_datadog_Darwin_arm64.tar.gz"
-      sha256 "fcdb8ee80fbd0cbd6489551429eac19014b309c26db8974ab37c4846a6e6c6fe"
+      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0/grafana_to_datadog_Darwin_arm64.tar.gz"
+      sha256 "9b20def3459c768aac7b324740cc2f33299268dd6b1530240659210825f6e86c"
 
       def install
         bin.install "grafana_to_datadog"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0-rc1/grafana_to_datadog_Darwin_x86_64.tar.gz"
-      sha256 "4b96e9af5eec7cc7912f25193cc162717003a738020926ea51a44300e59d27d1"
+      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0/grafana_to_datadog_Darwin_x86_64.tar.gz"
+      sha256 "5a58e4ec8b641b2751cdea293ff9f0b7961690c80954c7fee2da1a0eb107a999"
 
       def install
         bin.install "grafana_to_datadog"
@@ -28,17 +28,17 @@ class GrafanaToDatadog < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0-rc1/grafana_to_datadog_Linux_x86_64.tar.gz"
-      sha256 "8437e042879cf148bb4acd56a71c760d0c1b2a28500db265e92469a37c4c4b0f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0/grafana_to_datadog_Linux_arm64.tar.gz"
+      sha256 "7167ea9b6a15e99bf70bc71e721d85e1c4db33cd8ccac25c9a9a2d82e44ecba1"
 
       def install
         bin.install "grafana_to_datadog"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0-rc1/grafana_to_datadog_Linux_arm64.tar.gz"
-      sha256 "ff352cda582771c8ae5ca154b3a2036abf89a2f8b7b9066bd71497c68082efd6"
+    if Hardware::CPU.intel?
+      url "https://github.com/abruneau/grafana_to_datadog/releases/download/2.3.0/grafana_to_datadog_Linux_x86_64.tar.gz"
+      sha256 "95103b5b58fed951636dacdc3625fe20a34e0eee54bd57d370dea396ff41355d"
 
       def install
         bin.install "grafana_to_datadog"

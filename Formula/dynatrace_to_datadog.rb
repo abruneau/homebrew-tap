@@ -5,21 +5,21 @@
 class DynatraceToDatadog < Formula
   desc "Cli to convert Dynatrace synthetics to Datadog synthetics"
   homepage "https://github.com/abruneau/dynatrace_to_datadog"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.0.0/dynatrace_to_datadog_Darwin_x86_64.tar.gz"
-      sha256 "729f2dfe0890e05470070a61184741c44b4372540de82c05fa4f91aaf1bf096a"
+      url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.1.0/dynatrace_to_datadog_Darwin_x86_64.tar.gz"
+      sha256 "a60ef995f1249c35ce8f4ba2a4382804743cba9124f83a14f67d07b9bf9e3d10"
 
       def install
         bin.install "dynatrace_to_datadog"
       end
     end
     on_arm do
-      url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.0.0/dynatrace_to_datadog_Darwin_arm64.tar.gz"
-      sha256 "2150bb39d0a3e3360e7e5936180e681ac82688889fd88c6c3a49927b98a73cf6"
+      url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.1.0/dynatrace_to_datadog_Darwin_arm64.tar.gz"
+      sha256 "aab3f9568aa43b0b825023036da687925c6e417a2f97ba6f1becbb6f0fcd6c65"
 
       def install
         bin.install "dynatrace_to_datadog"
@@ -30,8 +30,8 @@ class DynatraceToDatadog < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.0.0/dynatrace_to_datadog_Linux_x86_64.tar.gz"
-        sha256 "4a15e572e475db3e2797bea6b4220f1996ad02dc26a3ae24279a9c1261cbbeb1"
+        url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.1.0/dynatrace_to_datadog_Linux_x86_64.tar.gz"
+        sha256 "ceb7c7800743dc4e259ea0ea73e5288798ede64a9dc825938db641389ed77a28"
 
         def install
           bin.install "dynatrace_to_datadog"
@@ -40,8 +40,8 @@ class DynatraceToDatadog < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.0.0/dynatrace_to_datadog_Linux_arm64.tar.gz"
-        sha256 "669eba6308add397afc195b583ea51b03e54fa2986ce50963273ff05ed93b068"
+        url "https://github.com/abruneau/dynatrace_to_datadog/releases/download/1.1.0/dynatrace_to_datadog_Linux_arm64.tar.gz"
+        sha256 "bff2a1aebd87c07909eac0b13b453fb9a4312741a27ff4fc181f27af00922454"
 
         def install
           bin.install "dynatrace_to_datadog"

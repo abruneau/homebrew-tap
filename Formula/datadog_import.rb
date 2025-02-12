@@ -5,21 +5,21 @@
 class DatadogImport < Formula
   desc "Cli to convert Dynatrace synthetics to Datadog synthetics"
   homepage "https://github.com/abruneau/datadog_import"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/abruneau/datadog_import/releases/download/1.3.0/datadog_import_Darwin_x86_64.tar.gz"
-      sha256 "bd8a0c70a37c33ba6430eaf6508f044e4db15b7a71c7b2a7e4ccf16c64c51a15"
+      url "https://github.com/abruneau/datadog_import/releases/download/1.3.1/datadog_import_Darwin_x86_64.tar.gz"
+      sha256 "aaebd958b4c0b12ee61a4c1eadae108e59a5bd247dd7079b0eeade5820453cd1"
 
       def install
         bin.install "datadog_import"
       end
     end
     on_arm do
-      url "https://github.com/abruneau/datadog_import/releases/download/1.3.0/datadog_import_Darwin_arm64.tar.gz"
-      sha256 "b46f957093b4f9d2a11168c5b13db905ed57d65d7c127987c4877bb1c173f334"
+      url "https://github.com/abruneau/datadog_import/releases/download/1.3.1/datadog_import_Darwin_arm64.tar.gz"
+      sha256 "caeb8d23e48f95d1e27fb1d62b246549e3d10117184afbe73caf5171d89a0fbb"
 
       def install
         bin.install "datadog_import"
@@ -30,8 +30,8 @@ class DatadogImport < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/abruneau/datadog_import/releases/download/1.3.0/datadog_import_Linux_x86_64.tar.gz"
-        sha256 "92a37f7c73817a15336316439f297b88c92908e69612150a2bc7d16aea719a30"
+        url "https://github.com/abruneau/datadog_import/releases/download/1.3.1/datadog_import_Linux_x86_64.tar.gz"
+        sha256 "c43cf2024b2e95d2c3ce398f98a276ec606003c5d1e156b7c3eaceb80ca0d44c"
 
         def install
           bin.install "datadog_import"
@@ -40,8 +40,8 @@ class DatadogImport < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/abruneau/datadog_import/releases/download/1.3.0/datadog_import_Linux_arm64.tar.gz"
-        sha256 "62d5fb7386685ba310dd1c12016440752b679813b1b5351d541265bca8cd629e"
+        url "https://github.com/abruneau/datadog_import/releases/download/1.3.1/datadog_import_Linux_arm64.tar.gz"
+        sha256 "a8692eeaf8367e3b4042b2a149e67da8d12397186745381a02ddf40e42c43a7c"
 
         def install
           bin.install "datadog_import"

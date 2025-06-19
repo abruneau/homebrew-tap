@@ -5,8 +5,10 @@
 class DynatraceToDatadog < Formula
   desc "Cli to convert Dynatrace synthetics to Datadog synthetics"
   homepage "https://github.com/abruneau/dynatrace_to_datadog"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
+
+  disable! date: "2025-06-19", because: "the cask should be used now instead", replacement_cask: "datadog_import"
 
   on_macos do
     on_intel do

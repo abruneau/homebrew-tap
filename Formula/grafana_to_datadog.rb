@@ -5,8 +5,10 @@
 class GrafanaToDatadog < Formula
   desc "Cli to convert Grafana dashboards to Datadog dashboards"
   homepage "https://github.com/abruneau/grafana_to_datadog"
-  version "2.3.0"
+  version "2.3.1"
   license "MIT"
+
+  disable! date: "2025-06-19", because: "the cask should be used now instead", replacement_cask: "datadog_import"
 
   on_macos do
     if Hardware::CPU.arm?

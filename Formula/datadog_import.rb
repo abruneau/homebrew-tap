@@ -5,8 +5,10 @@
 class DatadogImport < Formula
   desc "Cli to convert Dynatrace synthetics to Datadog synthetics"
   homepage "https://github.com/abruneau/datadog_import"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
+
+  disable! date: "2025-06-19", because: "the cask should be used now instead", replacement_cask: "datadog_import"
 
   on_macos do
     if Hardware::CPU.intel?
